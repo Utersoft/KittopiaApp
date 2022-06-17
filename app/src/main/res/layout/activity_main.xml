@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/interface_jeu_accueil"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kittopia"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pseudo"
+        android:drawablePadding="10dp"
+        android:layout_below="@+id/signIn"
+        android:hint="Pseudo"
+        android:drawableLeft="@drawable/ic_baseline_login_24"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:text="Utersoft"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:drawablePadding="10dp"
+        android:layout_below="@+id/pseudo"
+        android:hint="Password"
+        android:text="1234"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        />
+
+    <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/loginButton"
+        android:layout_marginTop="50dp"
+        android:text="Valider"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/blue"
+        android:layout_below="@id/password"
+        />
+</RelativeLayout>
